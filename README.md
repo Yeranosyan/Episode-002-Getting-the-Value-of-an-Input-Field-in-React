@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+## Episode 002
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## We use useState is a hook that allows us to add state variables to functional components.
 
-## Available Scripts
+Define the App component:
 
-In the project directory, you can run:
+## We define a functional component named App using arrow function syntax. This component represents our application.
 
-### `npm start`
+Initialize state variables:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## We initialize two state variables using the useState hook: message and showMessage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+message stores the value entered by the user in the input field.
+showMessage tracks whether to display the message and course info.
+Define event handlers:
 
-### `npm test`
+## We define two functions: handleChange and handleSubmit
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+handleChange is called whenever the user types in the input field. It updates the message state with the current value of the input field.
+handleSubmit is called when the user clicks the "Submit" button. It sets the showMessage state to true, indicating that the message and course info should be displayed.
+Render UI elements:
 
-### `npm run build`
+## Inside the return statement, we define the structure of our UI using JSX (a syntax extension for JavaScript that resembles HTML)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`We have a heading (<h1>) displaying the title of our application.
+An input field (<input>) allows the user to enter text. The onChange attribute calls the handleChange function whenever the input value changes.
+A "Submit" button (<button>) triggers the handleSubmit function when clicked.
+If showMessage is true, we display the entered input (<h2>) in green text along with an explanatory paragraph (<p>) about the course.`
+Conditional rendering:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## We use conditional rendering ({showMessage && ...}) to display the message and course info only when showMessage is true
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Styling:
 
-### `npm run eject`
+## We add some basic styling using CSS to make the UI look more presentable. The "Submit" button has a light blue background, and the cursor changes to a pointer on hover
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## That's it! This code demonstrates a simple React application that allows users to enter text, submit it, and display the entered text along with some course information
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
